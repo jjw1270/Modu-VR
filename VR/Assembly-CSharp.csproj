@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\HandUP.cs" />
     <Compile Include="Assets\Scenes\Protected_System\Debug\sys_log_do_not_modify.cs" />
+    <Compile Include="Assets\HandSimul.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
