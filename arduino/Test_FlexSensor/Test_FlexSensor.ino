@@ -6,17 +6,17 @@ const int flexpin_6 = A6;
 const int flexpin_7 = A7;
 const int flexpin_8 = A8;
 const int flexpin_9 = A9;
-const int flexpin_10 = A10;
+//const int flexpin_10 = A10;
 
-int flexVal_0;
-int flexVal_1;
-int flexVal_2;
-int flexVal_3;
-int flexVal_6;
-int flexVal_7;
-int flexVal_8;
-int flexVal_9;
-int flexVal_10;
+int flexVal_1up;
+int flexVal_1down;
+int flexVal_2up;
+int flexVal_2down;
+int flexVal_3up;
+int flexVal_3down;
+int flexVal_4up;
+int flexVal_4down;
+//int flexVal_10;
 
 void setup() {
   // put your setup code here, to run once:
@@ -29,23 +29,23 @@ void setup() {
   pinMode(flexpin_7, INPUT);
   pinMode(flexpin_8, INPUT);
   pinMode(flexpin_9, INPUT);
-  pinMode(flexpin_10, INPUT);
+  //pinMode(flexpin_10, INPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  flexVal_0 = analogRead(flexpin_0);
-  flexVal_1 = analogRead(flexpin_1);
-  flexVal_2 = analogRead(flexpin_2);
-  flexVal_3 = analogRead(flexpin_3);
-  flexVal_6 = analogRead(flexpin_6);
-  flexVal_7 = analogRead(flexpin_7);
-  flexVal_8 = analogRead(flexpin_8);
-  flexVal_9 = analogRead(flexpin_9);
-  flexVal_10 = analogRead(flexpin_10);
+  flexVal_1up = analogRead(flexpin_6);
+  flexVal_1down = analogRead(flexpin_7);
+  flexVal_2up = analogRead(flexpin_8);
+  flexVal_2down = analogRead(flexpin_9);
+  flexVal_3up = analogRead(flexpin_2);
+  flexVal_3down = analogRead(flexpin_1);
+  flexVal_4up = analogRead(flexpin_0);
+  flexVal_4down = analogRead(flexpin_3);
+  //flexVal_10 = analogRead(flexpin_10);
 
-  Serial.println(String(flexVal_0)+"  "+ String(flexVal_1)+"  "+ String(flexVal_2)+"  "+
-    String(flexVal_3)+"  "+ String(flexVal_6)+"  "+ String(flexVal_7)+"  "+
-    String(flexVal_8)+"  "+ String(flexVal_9)+"  "+ String(flexVal_10));
+  Serial.println(String(flexVal_1up)+"  "+ String(flexVal_1down)+"  "+ String(flexVal_2up)+"  "+
+    String(flexVal_2down)+"  "+ String(flexVal_3up)+"  "+ String(flexVal_3down)+"  "+
+    String(flexVal_4up)+"  "+ String(flexVal_4down)/*+"  "+ String(flexVal_10)*/);
   delay(100);
 }
