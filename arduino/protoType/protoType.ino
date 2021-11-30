@@ -6,6 +6,7 @@ const int flexpin_6 = A6;
 const int flexpin_7 = A7;
 const int flexpin_8 = A8;
 const int flexpin_9 = A9;
+const int flexpin_10= A10;
 
 int flexVal_1up;
 int flexVal_1down;
@@ -15,6 +16,7 @@ int flexVal_3up;
 int flexVal_3down;
 int flexVal_4up;
 int flexVal_4down;
+int flexVal_5;
 
 
 
@@ -32,6 +34,7 @@ void setup() {
   pinMode(flexpin_7, INPUT);
   pinMode(flexpin_8, INPUT);
   pinMode(flexpin_9, INPUT);
+  pinMode(flexpin_10, INPUT);
   
   Serial.begin(115200);
   while(!Serial);
@@ -48,6 +51,7 @@ void loop() {
   flexVal_3down = analogRead(flexpin_1);
   flexVal_4up = analogRead(flexpin_0);
   flexVal_4down = analogRead(flexpin_3);
+  flexVal_5 = analogRead(flexpin_10);
   
   if(Serial1.available()){
     receiveVal = Serial1.readStringUntil('\n');
@@ -62,11 +66,11 @@ void loop() {
     yVal = receiveVal.substring(xValNo+1, yValNo);
     zVal = receiveVal.substring(yValNo+1, zValNo);
     
-    Serial.println(xVal + "  " + yVal + "  " + zVal + "  ||  " +
-        String(flexVal_1up)+"  "+ String(flexVal_1down)+"  "+ String(flexVal_2up)+"  "+
-        String(flexVal_2down)+"  "+ String(flexVal_3up)+"  "+ String(flexVal_3down)+"  "+
-        String(flexVal_4up)+"  "+ String(flexVal_4down));
+    Serial.println(xVal + "," + yVal + "," + zVal + "|" +
+        String(flexVal_1up)+","+ String(flexVal_1down)+","+ String(flexVal_2up)+","+
+        String(flexVal_2down)+","+ String(flexVal_3up)+","+ String(flexVal_3down)+","+
+        String(flexVal_4up)+","+ String(flexVal_4down)+","+ String(flexVal_5));
     //Serial.println(receiveVal);
-    delay(100);
+    //delay(50);
   }
 }
