@@ -4,7 +4,7 @@ using System.IO.Ports;
 
 public class Serial : MonoBehaviour
 {
-    public static string comPort = "COM19";
+    public static string comPort = "COM22";
     SerialPort m_SerialPort = new SerialPort(comPort, 115200, Parity.None, 8, StopBits.One);
     string m_Data = null;
     public static string gyroData = null;

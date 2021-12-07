@@ -29,7 +29,7 @@ public class FlexData : MonoBehaviour
         f1up = int.Parse(data[0]) / 100;
         f1down = int.Parse(data[1]) / 100;
         f2up = int.Parse(data[2]) / 100;
-        f2down = int.Parse(data[3]) / 100 - 3;
+        f2down = int.Parse(data[3]) / 100 - 2;
         f3up = int.Parse(data[4]) / 100;
         f3down = int.Parse(data[5]) / 100;
         f4up = int.Parse(data[6]) / 100;
